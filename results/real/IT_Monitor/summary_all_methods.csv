@@ -1,0 +1,4 @@
+activity_type,method,dataset,SHD,Summary_F1,Summary_F1_sign,runtime
+Antivirus_Activity,vcdf_varlingam,single_run,42,0.487,0.462,6.0767
+Middleware_oriented_message_Activity,vcdf_varlingam,single_run,11,0.56,0.56,0.7324
+Web_Activity,vcdf_varlingam,single_run,25,0.549,0.51,32.1363
