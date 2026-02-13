@@ -1,10 +1,14 @@
 import numpy as np
 import pandas as pd
 import os
-from src.models.lingam_master import lingam
-from src.models.tigramite_master.tigramite.pcmci import PCMCI
-from src.models.tigramite_master.tigramite.independence_tests.parcorr import ParCorr
-from src.models.tigramite_master.tigramite import data_processing as pp
+
+# Causal discovery libraries (installed via pip)
+import lingam
+from tigramite.pcmci import PCMCI
+from tigramite.independence_tests.parcorr import ParCorr
+from tigramite import data_processing as pp
+
+# TCDF (local - no setup.py in original repo, cannot be pip installed)
 from src.models.TCDF_master import TCDF
 from src.causal_matrix_evaluation import evaluate_causal_matrices
 from src.vcdf import run_vcdf, grid_search_vcdf

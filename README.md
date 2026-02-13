@@ -12,7 +12,7 @@ The VCDF framework extends traditional causal discovery methods by incorporating
 - `results/`: Stores experimental results and analysis.
 - `src/`: Source code for the VCDF framework and method implementations.
   - `vcdf.py`: Core implementation of the Validated Consensus Driven Framework
-  - `run_causal_discovery.py`: Implementation of various causal discovery methods and their VCDF extensions
+  - `run_causal_discovery.py`: Implementation of various causal discovery methods (VAR-LiNGAM, PCMCI, TCDF, Dynotears) and VCDF extensions for VAR-LiNGAM and PCMCI
   - `causal_matrix_evaluation.py`: Utilities for evaluating causal matrices
   - `models/`: External model implementations (VAR-LiNGAM, PCMCI, TCDF)
 - `*.ipynb`: Jupyter notebooks for running experiments and analysis.
@@ -26,7 +26,7 @@ The VCDF framework extends traditional causal discovery methods by incorporating
    - Standard K-fold splitting with alternative time series aware option
 
 2. Causal Discovery Methods (`src/run_causal_discovery.py`)
-   - Base implementations: VAR-LiNGAM, PCMCI, TCDF, VAR-LiNGAM Bootstrap
+   - Base implementations: VAR-LiNGAM, PCMCI, TCDF, Dynotears, VAR-LiNGAM Bootstrap
    - VCDF extensions: VCDF-VAR-LiNGAM, VCDF-PCMCI
    - Utility functions for matrix manipulation and evaluation
 
@@ -38,8 +38,16 @@ The VCDF framework extends traditional causal discovery methods by incorporating
 ## Setup and Usage
 
 1. Clone the repository
-2. Install required dependencies (list dependencies or include a requirements.txt)
-3. Run the Jupyter notebooks to reproduce experiments or use the framework
+2. Create a virtual environment (Python 3.8-3.10 recommended):
+   ```bash
+   python3.10 -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the Jupyter notebooks to reproduce experiments or use the framework
 
 ### Example Usage
 

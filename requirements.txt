@@ -1,15 +1,39 @@
-numpy
-scipy
-scikit-learn>=1.2
-graphviz
-statsmodels
-networkx
-pandas
-pygam
-matplotlib
-psy
-semopy
-seaborn
-causalnex
-#optional (install if gpu and cuda is available)
-torch
+# VCDF: Validated Consensus Driven Framework for Time Series Causal Discovery
+# Python 3.10 recommended (tested and working environment)
+# Python 3.8-3.10 supported (causalnex requires Python <3.11)
+
+# Core scientific computing
+numpy==1.23.5              # causalnex requires <1.24; pygam warning can be ignored
+scipy==1.10.1
+pandas==1.5.3
+
+# Machine learning
+scikit-learn==1.3.2
+
+# Causal discovery libraries
+lingam==1.8.3              # VAR-LiNGAM (2024 release)
+tigramite==5.2.5.8         # PCMCI algorithm
+causalnex==0.12.1          # Dynotears (requires Python <3.11)
+
+# Statistical modeling
+statsmodels==0.14.1
+pygam==0.7.2              # Downgraded to support numpy<1.24 (required by causalnex)
+semopy==2.3.11
+
+# Graph and network
+networkx==3.1
+graphviz==0.20.3
+
+# Visualization
+matplotlib==3.7.5
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.67.1
+
+# Optional: GPU support (uncomment if CUDA available)
+# torch==2.2.2
+
+# Note: TCDF is included locally in src/models/TCDF_master/
+# Source: https://github.com/M-Nauta/TCDF (commit 8242232)
+# Paper: Nauta et al., "Causal Discovery with Attention-Based Convolutional Neural Networks" (2019)
